@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   * empty array
   * empty object
   * 1
@@ -23,12 +24,40 @@
 
   <script>
 
+const age = 100
+if (age > 70) {
+  console.log('in your seventies')
+} else if (age > 60) {
+  console.log('in your sixers')
+} else if (age > 50) {
+  console.log('in your 50s')
+} else {
+  console.log('nothing was true')
+}
+
+
+
+function slugify(sentence, lowercase) {
+let slug = sentence.replace(/\s/g, '-')
+if (lowercase) {
+
+  slug = slug.toLowerCase();
+}
+  return slug
+
+
+}
+
+
     function slugify(sentence, lowercase) {
-      let slug = sentence.replace(/\s/g, '-');
+
       if (lowercase) {
-        return slug.toLowerCase();
+
+        return sentence.replace(/\s/g, '-').toLowerCase();
+      } else {
+        return sentence.replace(/\s/g, '-')
       }
-      return slug;
+
     }
 
   </script>
